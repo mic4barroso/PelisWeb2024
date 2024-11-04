@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Batman - PelisWeb</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="estilopelis.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scriptpelis.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">PelisWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoNavegacion" 
+                aria-controls="contenidoNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="contenidoNavegacion">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menú
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                            <li><a class="dropdown-item" href="#">Peliculas</a></li>
+                            <li><a class="dropdown-item" href="#">Actores</a></li>
+                            <li><a class="dropdown-item" href="#">Directores</a></li>
+                           
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar películas..." aria-label="Buscar">
+                    <button class="btn btn-warning" type="submit">Buscar</button>
+                </form>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#modalSesion">
+                        Iniciar Sesión
+                    </button>
+                    <button type="button" class="btn btn-warning me-2" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+                        Registrarse
+                    </button>
+                    <a href="perfilUsuario.html" class="btn btn-link btnPerfil">Perfil</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="encabezado-pelicula">
+        <div class="container">
+            <h1 class="text-center my-4">The Batman</h1>
+
+            <div class="row">
+                <div class="col-md-4 cartelera-pelicula">
+                    <img src="imagenes/thebatman.jpg" alt="The Batman Official Poster" class="img-fluid">
+                </div>
+                <div class="col-md-8 trailer-pelicula">
+                    <div class="ratio ratio-16x9 w-100">
+                        <iframe src="https://www.youtube.com/embed/mqqft2x_Aa4" title="The Batman - Tráiler Oficial" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="sinopsis">
+            <h2 class="mb-4">Sinopsis Extendida</h2>
+            <p>"The Batman" se sumerge en la oscura y corrupta ciudad de Gotham, donde el joven Bruce Wayne (Robert Pattinson) lleva dos años enfrentándose al crimen como el vigilante enmascarado conocido como Batman. Aún luchando con el trauma de la pérdida de sus padres y buscando venganza, Batman se encuentra en medio de una compleja trama de corrupción que involucra a las figuras más poderosas de la ciudad.</p>
+            <p>La historia se desencadena cuando un misterioso asesino en serie, conocido como el Acertijo (Paul Dano), comienza a aterrorizar Gotham con elaborados y macabros crímenes, dejando pistas enigmáticas dirigidas directamente a Batman. A medida que el Caballero Oscuro investiga, se ve obligado a forjar nuevas alianzas y enfrentarse a viejos enemigos, incluyendo a la escurridiza ladrona Selina Kyle / Catwoman (Zoë Kravitz) y al ambicioso mafioso Oswald Cobblepot / El Pingüino (Colin Farrell).</p>
+            <p>Mientras desentraña la red de mentiras y descubre secretos impactantes sobre su propia familia, Batman debe enfrentarse no solo a los criminales de Gotham, sino también a sus propios demonios internos. La película explora temas de justicia, venganza y el costo personal de la misión de Batman, cuestionando si sus métodos están realmente ayudando a la ciudad o simplemente alimentando un ciclo interminable de violencia.</p>
+            <p>Con una atmósfera noir y un tono más oscuro y realista, "The Batman" ofrece una nueva perspectiva sobre el icónico personaje de DC Comics, presentando a un héroe más joven, vulnerable y lleno de dudas, que debe redefinir su papel como el protector de Gotham City.</p>
+        </section>
+
+        <section class="carousel-section">
+            <h2 class="mb-4">Imágenes Oficiales</h2>
+            <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/batman1.jpg" class="d-block w-100" alt="Batman en acción" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/batman2.jpg" class="d-block w-100" alt="Catwoman y Batman" height="500">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/batman3.jpg" class="d-block w-100" alt="El Acertijo" height="500">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="rating-section">
+            <h2 class="mb-4">Calificación</h2>
+            <div class="calificacion-estrellas" id="estrellaCalificacion">
+                <i class="far fa-star" data-calificacion="1"></i>
+                <i class="far fa-star" data-calificacion="2"></i>
+                <i class="far fa-star" data-calificacion="3"></i>
+                <i class="far fa-star" data-calificacion="4"></i>
+                <i class="far fa-star" data-calificacion="5"></i>
+            </div>
+            <p class="mt-2">Tu calificación: <span id="usuarioCalificacion">0</span>/5</p>
+            <p class="mt-2">Calificación promedio: 4.2/5</p>
+        </section>
+
+        <section class="technical-details bg-dark p-4 rounded">
+            <h2 class="mb-3">Detalles Técnicos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <p><strong>Tipo:</strong> Película</p>
+                    <p><strong>Género:</strong> Acción, Crimen, Drama</p>
+                    <p><strong>Clasificación:</strong> PG-13</p>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Fecha de lanzamiento:</strong> 4 de marzo de 2022</p>
+                    <p><strong>Idiomas:</strong> Inglés (original), Español, Francés</p>
+                    <p><strong>Duración:</strong> 176 minutos</p>
+                </div>
+                <div class="col-md-4">
+                    <p><strong>Director:</strong> Matt Reeves</p>
+                    <p><strong>Productor:</strong> Dylan Clark, Matt Reeves</p>
+                    <p><strong>Guionista:</strong> Matt Reeves, Peter Craig</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cast-crew-section mt-4">
+            <h2 class="text-center mb-4">Reparto y Equipo Técnico</h2>
+            <div class="row">
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/robert.jpg" alt="Robert Pattinson como Bruce Wayne / Batman">
+                    <h4>Robert Pattinson</h4>
+                    <p>Bruce Wayne / Batman</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/zoe.jpeg" alt="Zoë Kravitz como Selina Kyle / Catwoman">
+                    <h4>Zoë Kravitz</h4>
+                    <p>Selina Kyle / Catwoman</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/Paul.jpeg" alt="Paul Dano como Edward Nashton / Riddler">
+                    <h4>Paul Dano</h4>
+                    <p>Edward Nashton / Riddler</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/Colin.jpeg" alt="Colin Farrell como Oswald Cobblepot / Penguin">
+                    <h4>Colin Farrell</h4>
+                    <p>Oswald Cobblepot / Penguin</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/Michael.jpeg" alt="Michael Giacchino">
+                    <h4>Michael Giacchino</h4>
+                    <p>Compositor</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/James.jpeg" alt="James Chinlund">
+                    <h4>James Chinlund</h4>
+                    <p>Diseñador de producción</p>
+                </div>
+                <div class="col-md-3 miembro-reparto">
+                    <img src="imagenes/Naomi.jpeg" alt="Naomi Donne">
+                    <h4>Naomi Donne</h4>
+                    <p>Maquillaje</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-sharing bg-dark p-4 rounded">
+            <h3>Comparte esta película</h3>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://example.com/the-batman" target="_blank" class="btn btn-primary">
+                <i class="fab fa-facebook-f"></i> Compartir en Facebook
+            </a>
+        </section>
+
+        <section class="user-reviews bg-dark p-4 rounded">
+            <h3>Reseñas de usuarios</h3>
+            <div id="formularioResena" style="display: none;">
+                <textarea class="form-control mb-2" rows="3" placeholder="Escribe tu reseña aquí"></textarea>
+                <button class="btn btn-primary" onclick="submitReview()">Enviar reseña</button>
+            </div>
+            <button id="botonEscribirResena" class="btn btn-secondary" onclick="showReviewForm()">Escribir una reseña</button>
+            <div id="listaResenas" class="mt-3">
+            </div>
+        </section>
+
+        <section class="comments-section bg-dark p-4 rounded">
+            <h3>Comentarios</h3>
+            <div id="formularioComentario">
+                <textarea class="form-control mb-2" rows="2" placeholder="Escribe tu comentario aquí"></textarea>
+                <button class="btn btn-primary" onclick="enviarComentario()">Enviar comentario</button>
+            </div>
+            <div id="textoComentario" class="mt-3">
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 mt-5">
+        <p>&copy; 2024 PelisWeb. Todos los derechos reservados.</p>
+    </footer>
+
+    
+</body>
+</html>

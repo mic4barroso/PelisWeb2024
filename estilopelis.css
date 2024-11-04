@@ -1,0 +1,173 @@
+/* Estilos generales */
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffdd57;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    background-color: #000000;
+}
+
+.barra-navegacion-marca {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.barra-navegacion-marca:hover {
+    color: #ffdd57;
+}
+
+.barra-navegacion-enlaces .enlace {
+    color: #ffffff;
+}
+
+.barra-navegacion-enlaces .enlace:hover {
+    color: #ffdd57;
+}
+
+/* Encabezado de la película */
+.encabezado-pelicula h1 {
+    color: #ffc107;
+    font-size: 3em;
+    text-align: center;
+}
+
+.cartelera-pelicula img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+/* Sinopsis */
+.sinopsis {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.sinopsis p {
+    line-height: 1.6;
+}
+
+/* Carrusel de imágenes */
+.carrusel-imagenes img {
+    border-radius: 10px;
+}
+
+.carrusel-control-prev-icono, .carrusel-control-next-icono {
+    background-color: #ffc107;
+}
+
+/* Calificación */
+.calificacion-estrellas i {
+    font-size: 24px;
+    color: #ffd700;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.calificacion-estrellas i.far {
+    color: #cccccc;
+}
+
+.calificacion-estrellas i.fas.active,
+.calificacion-estrellas i:hover {
+    color: #ffd700;
+}
+
+/* Detalles técnicos */
+.detalles-tecnicos {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.detalles-tecnicos p {
+    margin-bottom: 10px;
+}
+
+/* Reparto */
+.miembro-reparto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.miembro-reparto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.miembro-reparto h4 {
+    color: #ffc107;
+}
+
+/* Sección de comentarios y reseñas */
+seccion-comentarios, .reseñas-usuario {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+seccion-comentarios textarea, .reseñas-usuario textarea {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+comentario, .reseña {
+    background-color: #444;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+comentario .btn, .reseña .btn {
+    margin-top: 10px;
+}
+
+/* Botones */
+.btn-advertencia {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-advertencia:hover {
+    background-color: #ffdd57;
+    border-color: #ffdd57;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Modal estilos */
+.modal-contenido {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.modal-cabecera, .modal-pie {
+    border: none;
+}

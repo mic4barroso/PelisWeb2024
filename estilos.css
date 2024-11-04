@@ -1,0 +1,111 @@
+body {
+    background-color: black;
+    color: orange;
+}
+
+.movie-card {
+    margin-bottom: 20px;
+}
+footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 0;
+    background: #343a40;
+    color: #fff;
+    border-radius: 8px;
+}
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombreUser {
+    margin: 0; 
+}
+
+.row-card{
+    justify-content: center;
+}
+
+.reseñas-bg {
+    background-color: orange; 
+}
+
+.reseña-item {
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 15px; 
+    padding: 15px; 
+}
+
+.titulo-peli{
+    text-align: center;
+}
+
+.profile-header{
+    margin-top: 5px;
+}
+
+.comentarios{
+    color: blue;
+}
+
+.btn-grande {
+    font-size: 1.5em;
+    padding: 20px 20px;
+}
+
+.foto-usuario {
+    transition: opacity 0.3s ease;
+}
+
+.foto-usuario:hover {
+    opacity: 0.5; 
+}
+
+.col-auto:hover .icon-editar {
+    display: block; 
+}
+
+.icon-editar {
+    display: none; 
+}
+
+.cardp {
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.cardp .cardimg {
+    width: 150px; 
+    height: auto; 
+    object-fit: cover;
+}
+
+.cardp .card-body {
+    background-color: #f8f9fa; 
+}
+
+.review-date{
+    color: gray;
+}
+
+.carousel-inner {
+    text-align: center; /* Centrar el contenido del carrusel */
+}
+
+.carousel-item img {
+    max-width: 50%; /* Ancho máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+.carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgb(255, 136, 0); /* Color de fondo de las flechas */
+        }
+
+
+

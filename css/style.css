@@ -1,0 +1,153 @@
+body {
+    background-color: black;
+    color: orange;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnLogin {
+    margin-top: 20px;
+}
+
+
+.pelicula {
+    background-color: #222;
+    border: 1px solid orange;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    transition: transform 0.2s;
+    width: 350px;
+    height: 450px;
+}
+
+.sinopsis {
+    margin-top: 30px;
+}
+
+.novedades {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagen-estrenos {
+    width: 65px;
+    height: 80px;
+}
+
+.imagen-actores {
+    margin-right: 15px;
+    border-radius: 4px;
+    width: 80px; /* Tamaño fijo para las imágenes */
+    height: auto;
+}
+
+.video-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.src-modal {
+    width: 697px;
+    height: 392px;
+}
+
+.pelicula:hover {
+    transform: scale(1.05);
+}
+
+.pelicula img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.like-button {
+    background-color: orange;
+    border: none;
+    color: black;
+    margin-top: 10px;
+}
+
+.card-img-top {
+    position: relative;
+}
+
+
+.duracion {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.boton-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedor-fluid {
+    background-color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lista-peliculas {
+    margin-top: 20px;
+}
+
+.titulo-peliculas {
+    color: orange;
+    text-decoration: underline;
+}
+
+/*Estilo Gestionar Contenido*/
+.form-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 30px;
+}
+.form-header {
+    margin-bottom: 20px;
+}
+.hidden {
+    display: none;
+}
+.movie-entry {
+    margin-bottom: 10px;
+}
+
+.formPersonal {
+    display: none;
+}
+
+.formPeliculaSerie {
+    display: none;
+}
+
+.nombreError {
+    display: none;
+}
+
+.sinopsisError {
+    display: none;
+}
