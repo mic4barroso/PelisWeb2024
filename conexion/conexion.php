@@ -2,7 +2,7 @@
 $servername = "localhost"; 
 $username = "root";
 $password = "";
-$db = "prueba_pelisweb";
+$db = "pelisweb";
 
 try {
     $conexion = new PDO("mysql:host=$servername;dbname=".$db.";charset=utf8", $username, $password);
@@ -11,4 +11,6 @@ try {
     echo "Connection failed: " . $e->getMessage();
     die();
 }
+
+
 ?>

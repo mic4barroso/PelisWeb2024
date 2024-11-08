@@ -50,8 +50,9 @@
 
                 
                 <div class="d-flex">
-                    <button type="button" class="btn btn-warning me-2 botonLogin" data-bs-toggle="modal" data-bs-target="#exampleModal">Iniciar Sesión</button>
-                    <button type="button" class="btn btn-warning me-2 botonRegistrarse" data-bs-toggle="modal" data-bs-target="#exampleModal2">Registrarse</button>
+                    <a href="formularioLogin.php"><button type="button" class="btn btn-warning me-2 botonlog">Login</button></a>
+                    
+                    <a href="formularioRegistro.php"><button type="button" class="btn btn-warning me-2 botonlog">Registrarse</button></a>
                     <a href="gestionarContenido.php"><button type="button" class="btn btn-warning me-2 botonGestion">Gestionar Contenido</button></a>
                     <a href="perfilUsuario.html" class="btn btn-link btnPerfil">Perfil</a>
                 </div>

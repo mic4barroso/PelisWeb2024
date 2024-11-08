@@ -209,15 +209,15 @@
                 </div>
                 <div class="modal-body">
                     <!-- Formulario de Iniciar Sesión -->
-                    <form id="loginForm">
+                    <form action="login.php" method="POST" id="loginForm">
                         <div class="mb-3">
                             <label for="emailModal" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailModal" aria-describedby="emailHelp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                            <input type="email" class="form-control" id="emailModal" name="emailModal" aria-describedby="emailHelp" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
                             <p class="text-danger" id="emailError"></p>
                         </div>
                         <div class="mb-3">
                             <label for="contrasenaModal" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="contrasenaModal" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            <input type="password" class="form-control" id="contrasenaModal" name="contrasenaModal" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                             <div id="passwordHelp" class="form-text">La contraseña debe tener al menos una mayúscula, una minúscula y un número.</div>
                             <p class="text-danger" id="contrasenaError"></p>
                             <button type="submit" class="btn btn-primary btnLogin">Enviar</button>
@@ -238,25 +238,25 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="registroForm">
+                    <form action="" method="POST" id="registroForm">
                         <div class="mb-3">
                             <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="NombreModal" placeholder="Introduce tu nombre" pattern="[A-Za-z\s]+" required>
+                            <input type="text" class="form-control" id="NombreModal" name="NombreModal" placeholder="Introduce tu nombre" pattern="[A-Za-z\s]+" required>
                             <p class="text-danger" id="nombreError"></p>
                         </div>
                         <div class="mb-3">
                             <label for="inputApellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="ApellidoModal" placeholder="Introduce tu apellido" pattern="[A-Za-z\s]+" required>
+                            <input type="text" class="form-control" id="ApellidoModal" name="ApellidoModal" placeholder="Introduce tu apellido" pattern="[A-Za-z\s]+" required>
                             <p class="text-danger" id="apellidoError"></p>
                         </div>
                         <div class="mb-3">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailModal2" aria-describedby="emailHelp" placeholder="Introduce tu correo electrónico" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                            <input type="email" class="form-control" id="emailModal2" name="emailModal2" aria-describedby="emailHelp" placeholder="Introduce tu correo electrónico" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
                             <p class="text-danger" id="emailError"></p>
                         </div>
                         <div class="mb-3">
                             <label for="inputPassword" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="contrasenaModal2" placeholder="Introduce tu contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                            <input type="password" class="form-control" id="contrasenaModal2" name="id="contrasenaModal2"" placeholder="Introduce tu contraseña" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                             <div id="passwordHelp" class="form-text">La contraseña debe tener al menos una mayúscula, una minúscula y un número.</div>
                             <p class="text-danger" id="contrasenaError"></p>
                         </div>
