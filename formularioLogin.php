@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $msg = 'Por favor, complete todos los campos.';
         $varClass = 'alert-danger';
     } else {
-        $queryCheckLogin = 'SELECT * FROM login WHERE email = :email AND contrasena = :contrasena';
+        $queryCheckLogin = 'SELECT * FROM usuarios WHERE email = :email AND contrasena = :contrasena';
         $resultadoQuery = $conexion->prepare($queryCheckLogin);
         $resultadoQuery->bindParam(':email', $_POST['emailModal']);
         $resultadoQuery->bindParam(':contrasena', $_POST['contrasenaModal']);
@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['id'] = $row['id'];
             $_SESSION['nombre'] = $row['nombre'];
             $_SESSION['apellido'] = $row['apellido'];
+            
 
             header('Location: /PelisWeb2024/index.php');
             die;

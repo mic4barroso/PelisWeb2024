@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $resultadoInsert->bindParam(':nombre', $_POST['nombre']);
             $resultadoInsert->bindParam(':apellido', $_POST['apellido']);
             $resultadoInsert->bindParam(':email', $_POST['email']);
-            $resultadoInsert->bindParam(':contrasena', $contrasena); // Se debería encriptar en una implementación real
+            $resultadoInsert->bindParam(':contrasena', $contrasena); 
             $resultadoInsert->execute();
 
             if ($resultadoInsert) {

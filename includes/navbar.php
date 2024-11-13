@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) { 
+    session_start(); 
+}
+?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.php">PelisWeb</a>
@@ -50,10 +56,33 @@
 
                 
                 <div class="d-flex">
-                    <a href="formularioLogin.php"><button type="button" class="btn btn-warning me-2 botonlog">Login</button></a>
                     
-                    <a href="formularioRegistro.php"><button type="button" class="btn btn-warning me-2 botonlog">Registrarse</button></a>
-                    <a href="gestionarContenido.php"><button type="button" class="btn btn-warning me-2 botonGestion">Gestionar Contenido</button></a>
+                    <?php
+                        if (isset($_SESSION['nombre'])) {
+                            // Si el usuario ha iniciado sesión, muestra su nombre y el botón de "Log Out"
+                            $nombre = $_SESSION['nombre'];
+                            echo '
+                                <span class="navbar-text">Hola, ' . $nombre . '</span>
+                                <a href="perfiles.php" class="fa-solid fa-gear"></a>                    
+                                <a href="logOut.php" class="btn btn-danger">Log Out</a>
+                            ';
+                            
+                            
+                        } else {
+            
+                            // El usuario no ha iniciado sesión, muestra un mensaje de bienvenida y los botones de "Log In" y "Registrarse"
+                            echo '<div class="ms-3">
+                                <span class="navbar-text">Bienvenido Invitado</span>
+                                <a href="formularioLogin.php" class="btn btn-primary">Log In</a>
+                                <a href="formularioRegistro.php" class="btn btn-secondary">Registrarse</a>
+                            </div>';
+            
+            
+                        }
+                    ?>
+                    
+                    
+                    
                     <a href="perfilUsuario.html" class="btn btn-link btnPerfil">Perfil</a>
                 </div>
             </div>
