@@ -6,7 +6,7 @@
     if (isset($_GET['busqueda'])) {
     $busqueda = $_GET['busqueda'];
 
-    $consulta = $conexion->prepare("SELECT * FROM film WHERE nombre LIKE :busqueda");
+    $consulta = $conexion->prepare("SELECT * FROM films WHERE nombre LIKE :busqueda");
     $busquedaParam = "%$busqueda%"; // Parámetro de búsqueda
     $consulta->bindParam(':busqueda', $busquedaParam);
     $consulta->execute();

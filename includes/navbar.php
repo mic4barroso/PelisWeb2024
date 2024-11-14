@@ -36,7 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
             if(isset($_GET['enviar'])) {
                 $busqueda = $_GET['busqueda'];
                 
-                $consulta = $conexion->prepare("SELECT * FROM film WHERE nombre LIKE '%$busqueda%'");
+                $consulta = $conexion->prepare("SELECT * FROM films WHERE nombre LIKE '%$busqueda%'");
                 
                 $consulta->execute();
                 
@@ -65,6 +65,7 @@ if (session_status() === PHP_SESSION_NONE) {
                                 <span class="navbar-text">Hola, ' . $nombre . '</span>
                                 <a href="perfiles.php" class="fa-solid fa-gear"></a>                    
                                 <a href="logOut.php" class="btn btn-danger">Log Out</a>
+                                <a href="perfilUsuario.php" class="btn btn-link btnPerfil">Perfil</a>
                             ';
                             
                             
@@ -73,7 +74,7 @@ if (session_status() === PHP_SESSION_NONE) {
                             // El usuario no ha iniciado sesión, muestra un mensaje de bienvenida y los botones de "Log In" y "Registrarse"
                             echo '<div class="ms-3">
                                 <span class="navbar-text">Bienvenido Invitado</span>
-                                <a href="formularioLogin.php" class="btn btn-primary">Log In</a>
+                                <a href="formularioLogin.php" class="btn btn-warning">Log In</a>
                                 <a href="formularioRegistro.php" class="btn btn-secondary">Registrarse</a>
                             </div>';
             
@@ -83,7 +84,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     
                     
                     
-                    <a href="perfilUsuario.html" class="btn btn-link btnPerfil">Perfil</a>
+                    
                 </div>
             </div>
         </div>

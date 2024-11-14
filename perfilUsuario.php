@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $pageType = 'perfilUsuario';
     require('./conexion/conexion.php');
 ?>
@@ -11,43 +12,6 @@
     <?php
     require('./includes/navbar.php');
 ?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">PelisWeb</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Menú
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="menuDropdown">
-                            <li><a class="dropdown-item" href="#">Peliculas</a></li>
-                            <li><a class="dropdown-item" href="#">Actores</a></li>
-                            <li><a class="dropdown-item" href="#">Directores</a></li>
-                           
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex me-3">
-                    <input class="form-control me-2" type="search" placeholder="Buscar películas..." aria-label="Buscar">
-                    <button class="btn btn-warning" type="submit">Buscar</button>
-                </form>
-                <div class="d-flex">
-                    <button type="button" class="btn btn-warning me-2 botonLogin" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Iniciar Sesión
-                    </button>
-                    <button type="button" class="btn btn-warning me-2 botonRegistrarse" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                        Registrarse
-                    </button>
-                    <button type="button" class="btn btn-link btnPerfil">Perfil</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- perfil -->
     <div class="container mt-5">
         <div class="profile-header">
@@ -56,11 +20,30 @@
                     <img src="img/icon.png" width="100px" height="100px" alt="Foto del Usuario">
                 </div>
                 <div class="col">
-                    <h1>lore_sanchez02</h1>
+                    <h1><?php
+                        if (isset($_SESSION['nombre'])) {
+                            // Si el usuario ha iniciado sesión, muestra su nombre y el botón de "Log Out"
+                            $nombre = $_SESSION['nombre'];
+                            echo '
+                                <span class="navbar-text">Hola, ' . $nombre . '</span>
+                            ';
+                            
+                            
+                        }
+                    ?></h1>
                     <a href="editarPerfil.html">
                         <button class="btn btn-warning" type="button">Editar Perfil</button>
                     </a>
-                    <p>Email: lorena@gmail.com</p>
+                    <p>Email: <?php
+                        if (isset($_SESSION['email'])) {
+                            
+                            $email = $_SESSION['email'];
+                            echo '
+                                <span class="navbar-text">' . $email . '</span>
+                            ';
+                        }
+                    ?></p>
+                    
                     <p>Cinéfila apasionada, disfruto explorar diferentes géneros y estilos, amor por el cine, es una forma de descubrir nuevas perspectivas y emociones.
                         Comparto mis opiniones y reseñas sobre películas que veo, destacando sus puntos fuertes, con un enfoque honesto y detallado, busco generar conversación y ayudar a otros espectadores a encontrar su próxima película favorita.</p>
                         

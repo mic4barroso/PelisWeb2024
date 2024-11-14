@@ -89,33 +89,37 @@ if (isset($msg) && $msg !== '') {
 <?php
 }
 ?>
-
-<!-- Formulario de Registro -->
-<form action="" method="POST" id="registerForm">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" pattern="[A-Za-z\s]+" required>
-        <p class="text-danger" id="nombreError"></p>
+<div class="container">
+    <div class="col">
+        <div class="row"> 
+            <!-- Formulario de Registro -->
+            <form action="" method="POST" id="registerForm" class="formulario">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" pattern="[A-Za-z\s]+" required>
+                    <p class="text-danger" id="nombreError"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" pattern="[A-Za-z\s]+" required>
+                    <p class="text-danger" id="apellidoError"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                    <p class="text-danger" id="emailError"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contrasena" name="contrasena" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <div id="passwordHelp" class="form-text">La contraseña debe tener al menos una mayúscula, una minúscula y un número.</div>
+                    <p class="text-danger" id="contrasenaError"></p>
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
     </div>
-    <div class="mb-3">
-        <label for="apellido" class="form-label">Apellido</label>
-        <input type="text" class="form-control" id="apellido" name="apellido" pattern="[A-Za-z\s]+" required>
-        <p class="text-danger" id="apellidoError"></p>
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
-        <p class="text-danger" id="emailError"></p>
-    </div>
-    <div class="mb-3">
-        <label for="contrasena" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" id="contrasena" name="contrasena" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-        <div id="passwordHelp" class="form-text">La contraseña debe tener al menos una mayúscula, una minúscula y un número.</div>
-        <p class="text-danger" id="contrasenaError"></p>
-    </div>
-    <button type="submit" class="btn btn-primary">Registrar</button>
-</form>
-
+</div>
 <?php
 require('./includes/footer.php');
 ?>
