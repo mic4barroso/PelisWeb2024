@@ -16,7 +16,7 @@
             <div class="col-md-8">
                 <a href="theBatman3.html" class="text-decoration-none">
                     <div class="card mb-4">
-                        <img src="imagenes/thebatman.jpg" alt="Trailer" class="card-img-top">
+                        <img src="imagenes/TheBatman.jpg" alt="Trailer" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">The Batman</h5>
                             <p class="card-text">The Batman es una película que sigue al icónico superhéroe mientras investiga una serie de asesinatos en Gotham City. A medida que desentraña una conspiración más profunda, Bruce Wayne debe enfrentar sus propios demonios y la corrupción que envuelve a la ciudad.</p>
